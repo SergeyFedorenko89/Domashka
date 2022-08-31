@@ -9,8 +9,7 @@
      {
         ber = number % 10;
         number = number / 10;
-        revers = revers * 10;
-        revers = revers + ber;
+        revers = revers * 10 + ber;
      }
     if (num == revers) 
     Console.WriteLine ($"Это число палиндром");
@@ -37,3 +36,18 @@ double yB = Convert.ToDouble(Console.ReadLine());
 double zB = Convert.ToDouble(Console.ReadLine());
 double Dis = Distance(xA, yA, zA, xB, yB, zB);
 Console.WriteLine($"3D {Dis}");*/
+
+/*Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.*/
+
+/*void Kubik (int number)
+{
+    int current = 1;
+    while (current <= number)
+     {
+        Console.Write(current * current * current + " ");
+        current++;
+     }
+}
+Console.WriteLine("Введите число: ");
+int Kub = Convert.ToInt32(Console.ReadLine());
+Kubik(Kub);*/
