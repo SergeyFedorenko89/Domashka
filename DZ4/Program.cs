@@ -37,7 +37,7 @@ Console.WriteLine (summa (num));*/
 
 /*Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран*/
 
-int[] EnkArray()
+/*int[] EnkArray()
 {
     Console.WriteLine("Введите ваш массив ");
     int size = Convert.ToInt32(Console.ReadLine());
@@ -57,4 +57,4 @@ void PokazArray(int[] array)
     }
     Console.WriteLine();    
 }
-PokazArray(EnkArray());
+PokazArray(EnkArray());*/
