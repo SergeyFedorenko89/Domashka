@@ -33,3 +33,28 @@ Console.WriteLine(AiB (A , B));*/
 Console.WriteLine ("Введите число ");
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine (summa (num));*/
+
+
+/*Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран*/
+
+int[] EnkArray()
+{
+    Console.WriteLine("Введите ваш массив ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите число {i + 1} :");
+        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return newArray;
+}
+void PokazArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i ++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();    
+}
+PokazArray(EnkArray());
