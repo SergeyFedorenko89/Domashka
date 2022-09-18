@@ -1,5 +1,4 @@
-﻿/*Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-Например, задан массив*/
+﻿/*Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива*/
 
 /*int[,] NewRandomArray(int row, int col, int min, int max)
 {
@@ -54,8 +53,7 @@ Enk(array);
 Show2Array(array);*/
 
 
-/*Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-Например, задан массив*/
+/*Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов*/
 
 /*int[,] Random2Array()
 {
@@ -82,8 +80,8 @@ void EnkArray2(int[,] array)
     for(int i = 0; i < array.GetLength(0); i++)
     {
         for(int j = 0; j < array.GetLength(1); j++)
-        Console.Write(array[i,j] + " ");
-        Console.WriteLine();
+          Console.Write(array[i,j] + " ");
+            Console.WriteLine();
     }
     Console.WriteLine();
 }
@@ -96,8 +94,8 @@ void EnkMin(int[,] array)
     for(int i = 0; i < array.GetLength(0); i++)
     {
         int sum = 0;
-        for(int j = 0; j < array.GetLength(1); j++)
-        sum = array[i,j] + sum;
+          for(int j = 0; j < array.GetLength(1); j++)
+            sum = array[i,j] + sum;
     if(sum < min)
       {
         min = sum;
@@ -109,3 +107,50 @@ void EnkMin(int[,] array)
 int[,] Array = Random2Array();
 EnkArray2(Array);
 EnkMin(Array);*/
+
+
+/*Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц*/
+
+/*int[,] RandomArray(int row, int col, int min, int max)
+{
+    int[,] array = new int[row, col];
+    for(int i = 0; i < row; i++)
+      for(int j = 0; j < col; j++)
+          array[i, j] = new Random().Next(min, max + 1);
+    return array;
+}
+void EnkArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+          Console.Write(array[i,j] + " ");
+            Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+int[,] EnkMulti(int[,] onearray, int[,] twoarray)
+{
+    int[,] newarray = new int[onearray.GetLength(0), onearray.GetLength(1)];
+    for(int i = 0; i < onearray.GetLength(0); i++)
+      for(int j = 0; j < onearray.GetLength(1); j++)
+        for(int k = 0; k < onearray.GetLength(1); k++)
+         {
+            newarray[i,j] += onearray[i,k] * twoarray[k,j];
+         }
+    return newarray;
+}
+Console.Write("Введите количество строк: ");
+int newmin = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int newmax = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальное число: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное число: ");
+int max = Convert.ToInt32(Console.ReadLine());
+int[,] oneArray = RandomArray(newmin, newmax, min, max);
+EnkArray(oneArray);
+int[,] twoArray = RandomArray(newmin, newmax, min, max);
+EnkArray(twoArray);
+int[,] EnkMat = EnkMulti(oneArray, twoArray);
+EnkArray(EnkMat);*/
